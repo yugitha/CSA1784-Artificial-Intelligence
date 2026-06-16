@@ -1,0 +1,31 @@
+% Symptoms for diseases
+
+disease(flu) :-
+    symptom(fever),
+    symptom(cough),
+    symptom(headache).
+
+disease(cold) :-
+    symptom(cough),
+    symptom(sneezing).
+
+disease(malaria) :-
+    symptom(fever),
+    symptom(chills),
+    symptom(sweating).
+
+disease(covid19) :-
+    symptom(fever),
+    symptom(cough),
+    symptom(breathlessness).
+
+% Patient Symptoms
+
+symptom(fever).
+symptom(cough).
+symptom(headache).
+
+% Rule for Diagnosis
+
+diagnosis(Disease) :-
+    disease(Disease).
